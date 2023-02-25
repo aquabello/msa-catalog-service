@@ -28,7 +28,7 @@ spring:
 # Log
 logging:
   level:
-    # com.nhn.cloudhost: trace # log4j ?? ?????: debug, ???: info
+    com.today25.catalogservice: DEBUG # log4j ?? ?????: debug, ???: info
     org.springframework: error
     org.hibernate.SQL: debug
     org.apache.coyote.http11: debug # HTTP PRINT
