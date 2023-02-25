@@ -37,9 +37,9 @@ public class CatalogController {
         Iterable<CatalogEntity> allCatalogs = catalogService.getAllCatalogs();
         List<ResponseCatalog> results = new ArrayList<>();
 
-        allCatalogs.forEach( v -> {
-            results.add(new ModelMapper().map(v, ResponseCatalog.class));
-        });
+        allCatalogs.forEach(
+                v -> results.add(new ModelMapper().map(v, ResponseCatalog.class))
+        );
 
         return ResponseEntity.status(HttpStatus.OK).body(results);
     }
